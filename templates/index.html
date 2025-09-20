@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản lý điểm thi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="box-menu">
+      <ul>
+        <li class="active">
+          <a href="/"><i class="fa-solid fa-house-user"></i>Trang chủ</a>
+        </li>
+        <li>
+          <a href="/students"><i class="fa-solid fa-table"></i>Danh sách HS</a>
+        </li>
+        <li>
+          <a href="/"><i class="fa-solid fa-server"></i>Giới Thiệu</a>
+          <div class="box-submenu">
+            <ul>
+              <li><a href="/">Về Chúng Tôi</a></li>
+              <li><a href="/">Đội Ngũ Nhân Viên </a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="/"><i class="fa-solid fa-chart-simple"></i>Biểu Đồ</a>
+          <div class="box-submenu">
+            <ul>
+              <li><a href="/chart"> Biểu đồ điểm trung bình</a></li>
+              <li><a href="/chart/Van">Biểu đồ môn Văn </a></li>
+              <li><a href="/chart/Anh">Biểu đồ môn Anh </a></li>
+              <li><a href="/chart/Toan">Biểu đồ môn Toán</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="/"><i class="fa-solid fa-bars"></i>Chức Năng </a>
+          <div class="box-submenu">
+            <ul>
+              <li><a href="/add"> Thêm Học Sinh</a></li>
+              <li><a href="/edit">Cập Nhật Học Sinh </a></li>
+              <li><a href="/delete">Xóa Học Sinh </a></li>
+              <li><a href="/excel">Xuất file Excel </a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="/"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</a>
+          <div class="box-submenu">
+            <ul>
+              <li><a href="/search"> Tìm Học Sinh Theo Mã</a></li>
+              <li><a href="/top_student">Tìm Học Sinh Có DTB Max </a></li>
+              <li><a href="/low_student">Tìm Học Sinh Có DTB Min </a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="/"><i class="fa-solid fa-address-card"></i>Liên hệ </a>
+        </li>
+      </ul>
+      <br />
+    </div>
+  </body>
+</html>

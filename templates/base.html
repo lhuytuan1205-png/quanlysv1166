@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Quản lý điểm thi{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+    <!-- Navbar chung -->
+    <div class="navbar">
+      <h2>Quản lý điểm thi</h2>
+      <div>
+        <a href="/">Trang chủ</a>
+        <a href="/add">Thêm</a>
+        <a href="/edit">Sửa</a>
+        <a href="/delete">Xóa</a>
+        <a href="/search">Tìm kiếm</a>
+        <a href="/chart">Biểu đồ</a>
+      </div>
+    </div>
+
+    <!-- Nội dung riêng của từng trang -->
+    <div class="container">{% block content %}{% endblock %}</div>
+  </body>
+</html>

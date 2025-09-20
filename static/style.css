@@ -1,0 +1,203 @@
+/* Reset cơ bản */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(backgroud3.jpg) no-repeat top left;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+.box-menu {
+  background-color: #4a22c4;
+  text-align: center;
+}
+.box-menu ul {
+  display: inline-flex;
+  list-style: none;
+  color: #fff;
+}
+.box-menu ul li {
+  width: 175px;
+  padding: 15px;
+  margin: 15px;
+}
+.box-menu ul li a {
+  color: #fff;
+  text-emphasis-color: none;
+}
+.active,
+.box-menu ul li:hover {
+  background: #3406d1;
+  border-radius: 3px;
+
+  padding: 15px;
+  margin: 15px;
+}
+
+.box-menu .fa {
+  margin-right: 6px;
+}
+.box-submenu {
+  display: none;
+}
+
+.box-menu ul li:hover .box-submenu {
+  display: block;
+  position: absolute;
+  background: #2acdcf;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+.box-menu ul li:hover .box-submenu ul {
+  display: block;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+.box-menu ul li:hover .box-submenu ul li {
+  width: 220px;
+  text-align: left;
+  border-bottom: dotted 1px #fff;
+  background: transparent;
+  border-radius: 0;
+  padding: 15px;
+  margin: 10px;
+}
+.box-menu ul li:hover .box-submenu ul li:last-child {
+  border-bottom: none;
+}
+.box-menu ul li:hover .box-submenu ul li a:hover {
+  color: yellowgreen;
+}
+
+/* ----- Navbar ----- */
+.navbar {
+  background: #2c3e50;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: #ecf0f1;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: #ecf0f1;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #f1c40f;
+}
+
+/* ----- Container ----- */
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ----- Tiêu đề ----- */
+h1,
+h2 {
+  margin-bottom: 15px;
+  color: #96ff03;
+}
+
+/* ----- Bảng dữ liệu ----- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #3498db;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+/* ----- Form ----- */
+form {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form input,
+form button {
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #2ecc71;
+}
+
+/* ----- Thông báo ----- */
+.message {
+  margin: 10px 0;
+  font-weight: bold;
+}
+.message.success {
+  color: rgb(152, 224, 228);
+}
+.message.error {
+  color: rgb(0, 247, 202);
+}
+button {
+  background-color: #ed5807;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #acb9aa;
+}

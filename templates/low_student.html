@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block title %}Học sinh DiemTB thấp nhất{% endblock
+%} {% block content %}
+<h1>Học sinh có DiemTB thấp nhất</h1>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Mã HS</th>
+    <td>{{ student.MaHS }}</td>
+  </tr>
+  <tr>
+    <th>Họ Tên</th>
+    <td>{{ student.HoTen }}</td>
+  </tr>
+  <tr>
+    <th>Toán</th>
+    <td>{{ student.Toan }}</td>
+  </tr>
+  <tr>
+    <th>Văn</th>
+    <td>{{ student.Van }}</td>
+  </tr>
+  <tr>
+    <th>Anh</th>
+    <td>{{ student.Anh }}</td>
+  </tr>
+  <tr>
+    <th>DiemTB</th>
+    <td>{{ "%.2f"|format(student.DiemTB) }}</td>
+  </tr>
+</table>
+
+<br />
+<button onclick="window.location.href='/'">Trang Chủ</button>
+{% endblock %}

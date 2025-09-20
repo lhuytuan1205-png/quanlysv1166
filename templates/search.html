@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tìm kiếm học sinh</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Tìm kiếm học sinh</h1>
+
+    <form action="/search" method="post">
+      Nhập Mã HS hoặc Tên HS:
+      <input type="text" name="keyword" value="{{ keyword }}" />
+      <button type="submit">Tìm</button>
+    </form>
+
+    {% if result %}
+    <h2>Kết quả tìm kiếm</h2>
+    {{ result|safe }} {% elif keyword %}
+    <h3>
+      <p style="color: rgb(160, 225, 62)">
+        Không tìm thấy sinh viên theo yêu cầu !
+      </p>
+    </h3>
+    {% endif %}
+
+    <h2>Danh sách hiện tại</h2>
+    {{ tables|safe }}
+
+    <br />
+    <button onclick="window.location.href='/'">Trang Chủ</button>
+  </body>
+</html>

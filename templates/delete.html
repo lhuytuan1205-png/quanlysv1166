@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Xoá học sinh</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Xoá học sinh</h1>
+
+    <form action="/delete" method="post">
+      Nhập Mã HS cần xoá:
+      <input type="text" name="MaHS" required />
+      <button type="submit">Xoá</button>
+    </form>
+
+    <h3><p style="color: rgb(96, 205, 63)">{{ message }}</p></h3>
+
+    <h2>Danh sách hiện tại</h2>
+    {{ tables|safe }}
+
+    <br />
+    <button onclick="window.location.href='/'">Trang Chủ</button>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+/* ----- Form ----- */
+form {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form input,
+form button {
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #2ecc71;
+}
+
+/* ----- Thông báo ----- */
+.message {
+  margin: 10px 0;
+  font-weight: bold;
+}
+.message.success {
+  color: green;
+}
+.message.error {
+  color: red;
+}

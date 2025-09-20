@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sửa học sinh</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Sửa thông tin học sinh</h1>
+
+    <form action="/edit" method="post">
+      Mã HS: <input type="text" name="MaHS" required /><br />
+      Tên HS: <input type="text" name="HoTen" required /><br />
+      Toán: <input type="number" name="Toan" required /><br />
+      Văn: <input type="number" name="Van" required /><br />
+      Anh: <input type="number" name="Anh" required /><br />
+      <button type="submit">Cập nhật</button>
+    </form>
+
+    <p style="color: green">{{ message }}</p>
+
+    <h2>Danh sách hiện tại</h2>
+    {{ tables|safe }}
+
+    <br />
+    <button onclick="window.location.href='/'">Trang Chủ</button>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thêm học sinh</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Thêm học sinh mới</h1>
+
+    <form action="/add" method="post">
+      Mã HS: <input type="text" name="MaHS" required /><br />
+      HoTen: <input type="text" name="HoTen" required /><br />
+      Toán: <input type="number" name="Toan" required /><br />
+      Văn: <input type="number" name="Van" required /><br />
+      Anh: <input type="number" name="Anh" required /><br />
+      <button type="submit">Thêm</button>
+    </form>
+
+    <p style="color: rgb(209, 238, 24)">{{ message }}</p>
+
+    <h2>Danh sách học sinh</h2>
+    {{ tables|safe }}
+
+    <br />
+    <button onclick="window.location.href='/'">Trang Chủ</button>
+  </body>
+</html>
