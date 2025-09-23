@@ -2,6 +2,7 @@ from flask import Flask, render_template, render_template_string, request, redir
 import pandas as pd
 import matplotlib.pyplot as plt 
 import io, base64
+import os 
 
 app = Flask(__name__)
 
@@ -251,4 +252,5 @@ def excel():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5500)
+    port = int(os.environ.get("PORT", 5000))  # Lấy PORT từ Render
+    app.run(host="0.0.0.0", port=port, debug=False)
