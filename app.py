@@ -82,7 +82,7 @@ def add():
         else:
             # Thêm học sinh mới
             new_data = {"MaHS": mahs, "HoTen": hoten, "Toan": toan, "Van": van, "Anh": anh}
-            df = pd.concat(new_data, ignore_index=True)
+            df = pd.concat([df, pd.DataFrame([new_data])], ignore_index=True)
             save_data(df)
             message = f"✅ Đã thêm học sinh mới: {hoten} (Mã HS: {mahs})"
             category = "success"
