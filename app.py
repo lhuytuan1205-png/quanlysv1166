@@ -70,7 +70,7 @@ def add():
 
     if request.method == "POST":
         mahs = request.form["MaHS"]
-        tenhs = request.form["HoTen"]
+        hoten = request.form["HoTen"]
         toan = int(request.form["Toan"])
         van = int(request.form["Van"])
         anh = int(request.form["Anh"])
