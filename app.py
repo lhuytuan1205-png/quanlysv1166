@@ -23,7 +23,7 @@ def index():
 @app.route("/chart")
 def chart():
     df = load_data()
-    df["DiemTB"] = df[["Toan", "Van", "Anh"]].mean(axis=1)
+    df["DiemTB"] = df[["Toan", "Van", "Anh"]].mean(axis=1).round(2)
     
     
     #vẽ biểu đồ
