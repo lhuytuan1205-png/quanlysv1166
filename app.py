@@ -208,7 +208,7 @@ def low_student():
 @app.route("/students")
 def students_list():
     df = load_data()  # Đọc dữ liệu CSV
-    df["DiemTB"] = df[["Toan", "Van", "Anh"]].mean(axis=1)
+    df["DiemTB"] = df[["Toan", "Van", "Anh"]].mean(axis=1).round(2)
     
     # Chuyển DataFrame thành HTML table
     table_html = df.to_html(classes="table table-bordered", index=False)
